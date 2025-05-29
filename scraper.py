@@ -8,7 +8,7 @@ import pandas as pd
 
 window = Tk()
 window.geometry("400x600")
-window.title("WEB SCRAPER")
+window.title("WEB SCRAP")
 window.config(background="black")
 
 
@@ -45,32 +45,11 @@ def url_locater():
 
 
 #####################
-label_1 = Label(window,
-              font=('arial',30,'italic'),
-              fg="white",bg='black',
-              text="URL",
-              relief="sunken",
-               bd =10,
-              )
-label_1.place(x=150,y=200)
+Label(window, text="Class:", font=('Arial', 12), fg="white", bg="black").grid(row=3, column=0, sticky=E, padx=10, pady=5)
 ########################
-label_2 = Label(window,
-              font=('arial',15,'italic'),
-              fg="white",bg='black',
-              text="TAG::",
-              relief="sunken",
-              bd =4,
-              )
-label_2.place(x=150,y=350)
+Label(window, text="Tag:", font=('Arial', 12), fg="white", bg="black").grid(row=2, column=0, sticky=E, padx=10, pady=5)
 ########################
-label_3 = Label(window,
-              font=('arial',15,'italic'),
-              fg="white",bg='black',
-              text="CLASS::",
-              relief="sunken",
-              bd =4,
-              )
-label_3.place(x=150,y=400)
+Label(window, text="URL:", font=('Arial', 12), fg="white", bg="black").grid(row=1, column=0, sticky=E, padx=10, pady=5)
 
 
 #####################button
@@ -83,14 +62,14 @@ my_button = Button(window,
                 )
 my_button.place(x=170,y=450)
 
-new_tag = Entry(window,width=5,bg="white")
-new_tag.place(x=250,y=360)
+new_tag = Entry(window, width=30)
+new_tag.grid(row=2, column=1, padx=50, pady=60)
 
-new_class = Entry(window,width=5,bg="white")
-new_class.place(x=250,y=400)
+new_class = Entry(window, width=30)
+new_class.grid(row=3, column=1, padx=50, pady=10)
 
-new_url = Entry(window,width=25,bg="white")
-new_url.place(x=120,y=300)
+new_url = Entry(window, width=30)
+new_url.grid(row=1, column=1, padx=50, pady=10)
 
 
 
